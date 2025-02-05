@@ -1,0 +1,35 @@
+#LOOP1
+lista1 = [10,16,24,39,47]
+lista2 = [32,89,47,76,12]
+
+for elemento_lista1 in lista1:
+    for elemento_lista2 in lista2:
+        if elemento_lista1 == 47 and elemento_lista2 == 47:
+            print ("O número está em ambas as listas")
+
+#LOOP2
+valor = 0
+while valor < 10:
+    if valor == 4:
+        break
+    else:
+        pass
+    print(valor)
+    valor = valor + 1
+
+
+#LOOP3
+primos = []
+for num in range (2,31):
+    eh_primo = True
+    i = 2
+    while i <=num // 2:
+        if num % i ==0:
+            eh_primo = False
+            break
+        i += 1
+    
+    if eh_primo:
+        primos.append(num)
+        
+print(primos)

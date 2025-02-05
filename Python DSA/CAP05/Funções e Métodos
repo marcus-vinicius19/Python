@@ -1,0 +1,16 @@
+def primeiraFunc():
+    print('Hello World')
+primeiraFunc()
+
+def segundaFunc(nome):
+    print("Hello %s" %(nome))
+segundaFunc("Roberto")
+
+def printvarinfo(arg1, *vartuple):
+    print("O parâmetro passado foi: ", arg1)
+    
+    for item in vartuple:
+        print("O parâmetro passado foi: ", item)
+    return;
+printvarinfo(10)
+printvarinfo("A", "B", "C")

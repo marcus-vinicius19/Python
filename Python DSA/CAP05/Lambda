@@ -1,0 +1,7 @@
+potencia = lambda num: num ** 2
+potencia(5)
+
+Par = lambda x: x%2==0
+Par(3)
+
+Par(4)

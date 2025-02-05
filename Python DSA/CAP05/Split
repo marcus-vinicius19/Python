@@ -1,0 +1,17 @@
+def split_string_palavras(text):
+    return text.split(" ")
+
+texto = "Esta função será bastante útil para separar grandes volumes de dados."
+print(split_string_palavras(texto))
+
+token = split_string_palavras(texto)
+print(token)
+
+
+def split_string_letras(text):
+    texto = text.upper()
+    for letra in texto:
+        print(letra)
+
+split_string_palavras(texto)
+

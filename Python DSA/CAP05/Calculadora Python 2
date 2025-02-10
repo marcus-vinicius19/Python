@@ -1,0 +1,21 @@
+ap1 = int(input("Bem-vindo a Calculadora Python \n Selecione a Operação Desejada \n 1 - Soma \n 2 - Subtração \n 3 - Multiplicação \n 4 - Divisão "))
+num1 = float(input("Insira o primeiro número: "))
+num2 = float(input("Insira o segundo número:"))
+if ap1 == 1:
+    resultado = num1 + num2
+    print ("A Soma de %.2f e %.2f é %.2f "%(num1, num2, resultado))
+    
+elif ap1 == 2:
+    resultado = num1 - num2
+    print ("A Subtração de %.2f e %.2f é %.2f "%(num1, num2, resultado))
+    
+elif ap1 == 3:
+    resultado = num1 * num2
+    print ("A Multiplicação de %.2f e %.2f é %.2f "%(num1, num2, resultado))
+    
+elif ap1 == 4:
+    resultado = num1 / num2
+    print ("A Divisão de %.2f e %.2f é %.2f "%(num1, num2, resultado))
+    
+else:
+    print("Operação inválida")

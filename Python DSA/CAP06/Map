@@ -1,0 +1,39 @@
+# Função Python que retorna um número ao quadrado
+def potencia(x):
+    return x ** 2
+
+numeros = [1, 2, 3, 4, 5]
+numeros_ao_quadrado = list(map(potencia, numeros))
+print(numeros_ao_quadrado)
+
+# Criando duas funções
+
+# Função 1 - Recebe uma temperatura como parâmetro e retorna a temperatura em Fahrenheit
+def fahrenheit(T):
+    return ((float(9)/5)*T + 32)
+
+# Função 2 - Recebe uma temperatura como parâmetro e retorna a temperatura em Celsius
+def celsius(T):
+    return (float(5)/9)*(T-32)
+
+=========================================================================================================================================================
+# Criando uma lista
+temperaturas = [0, 22.5, 40, 100]
+# Aplicando a função a cada elemento da lista de temperaturas. 
+# Em Python 3, a funçãp map() retornar um iterator
+map(fahrenheit, temperaturas)
+# Função map() retornando a lista de temperaturas convertidas em Fahrenheit
+list(map(fahrenheit, temperaturas))
+
+=========================================================================================================================================================
+# Usando um loop for para imprimir o resultado da função map()
+for temp in map(fahrenheit, temperaturas):
+    print(temp)
+
+# Convertendo para Celsius
+map(celsius, temperaturas)
+list(map(celsius, temperaturas))
+# Usando expressão lambda
+list(map(lambda x: (5.0/9)*(x - 32), temperaturas))
+
+

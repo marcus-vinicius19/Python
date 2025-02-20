@@ -1,0 +1,51 @@
+# 1- Crie um REGEX para contar quantas vezes o caracter "a" aparece em todo o texto da música.
+match = re.findall("a", musica)
+count = len(match)
+print("O caractere 'a' aparece", count, "vezes no texto.")
+
+# 1- Crie um REGEX para contar quantas vezes o caracter "a" aparece em todo o texto da música.
+resultado1 = len(re.findall("a", musica))
+print("O caractere 'a' apareceu", resultado1, "vezes na música.")
+
+# 2- Crie um REGEX em Python para contar quantas vezes a palavra tempo aparece na música.
+match = re.findall(r"\btempo\b", musica)
+count = len(match)
+print("A palavra 'tempo' aparece", count, "vezes no texto.")
+
+# 2- Crie um REGEX em Python para contar quantas vezes a palavra tempo aparece na música.
+resultado2 = len(re.findall("tempo", musica))
+print("A palavra 'tempo' apareceu", resultado2, "vezes na música.")
+
+# 3- Crie um REGEX em Python para extrair as palavras seguidas por exclamação.
+match = re.findall(r"\b\w+!\b", musica)
+print("As palavras seguidas por exclamação são:", match)
+
+# 3- Crie um REGEX em Python para extrair as palavras seguidas por exclamação.
+resultado3 = re.findall(r'\b\w+!', musica)
+print("Estas são as palavras seguidas por exclamação:", resultado3)
+
+# 4- Crie um REGEX que extrai qualquer palavra cujo antecessor seja a palavra "esse" e 
+# o sucessor seja a palavra "amargo" em um texto.
+resultado = re.findall(r"esse\s(\w+)\samargo", musica)
+print("Palavras entre 'esse' e 'amargo':", resultado)
+
+
+# 4- Crie um REGEX que extrai qualquer palavra cujo antecessor seja a palavra "esse" e 
+# o sucessor seja a palavra "amargo" em um texto.
+resultado4 = re.findall(r'\besse\s(\w+)\samargo\b', musica)
+print("Palavra(s) encontrada(s):", resultado4)
+
+# 5- Crie um REGEX que retorne as palavras com acento, mas somente os caracteres na palavra que 
+# são anteriores ao caracter com acento.
+resultado = re.findall(r"(\w+)\b[áéíóú]", musica)
+print("Partes das palavras com acentos:", resultado)
+
+# 5- Crie um REGEX que retorne as palavras com acento, mas somente os caracteres na palavra que 
+# são anteriores ao caracter com acento.
+resultado = re.findall(r"(\w+)[\u00C0-\u017F]+", musica)
+print("Palavras com acento, sem o acento:", resultado)
+
+# 5- Crie um REGEX que retorne as palavras com acento, mas somente os caracteres na palavra que 
+# são anteriores ao caracter com acento.
+resultado5 = re.findall(r'\b[\wÀ-ÿ]+[áéíóúãõç]', musica)
+print("As palavras acentuadas são:", resultado5)
